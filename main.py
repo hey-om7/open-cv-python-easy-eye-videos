@@ -5,6 +5,8 @@ import cvzone
 from cvzone.SelfiSegmentationModule import SelfiSegmentation
 import os
 import sys
+from convertTomp3 import convertToMp3
+from videoMp3Combiner import videomp3combiner
 
 
 cap = cv2.VideoCapture("vid.mp4")
@@ -44,3 +46,9 @@ while True:
 out.release()
 cap.release()
 cv2.destroyAllWindows()
+print(convertToMp3("vid.mp4"))
+videomp3combiner("output.mp4", "theaudio.mp3", "combined.mp4")
+
+os.remove("vid.mp4")
+os.remove("output.mp4")
+os.remove("theaudio.mp3")
