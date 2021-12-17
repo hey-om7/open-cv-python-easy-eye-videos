@@ -3,6 +3,9 @@
 <br/>
 <br/>
 
+## **Working**: Separating the forground(Subject) from the background of the video and making the background negative to make the video less irritating to eyes.
+<br/>
+
 ## Usage Reference
  
 
