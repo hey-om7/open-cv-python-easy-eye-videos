@@ -5,11 +5,13 @@ import cvzone
 from cvzone.SelfiSegmentationModule import SelfiSegmentation
 import os
 import sys
-from convertTomp3 import convertToMp3
-from videoMp3Combiner import videomp3combiner
+from projectFiles.convertTomp3 import convertToMp3
+from projectFiles.videoMp3Combiner import videomp3combiner
 
 
 def processVideo(inputVideo: str, outputVideo: str, subjectThreshold: float, backgroundThreshold: float):
+    inputVideo = os.path.abspath(
+        os.path.join('..', os.getcwd()))+"/"+inputVideo
     cap = cv2.VideoCapture(inputVideo)
     cap.set(3, 640)
     cap.set(4, 480)
