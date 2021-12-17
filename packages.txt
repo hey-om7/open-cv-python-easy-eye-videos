@@ -1,0 +1,3 @@
+pip3 install cvzone
+pip3 install mediapipe
+pip3 install moviepy
